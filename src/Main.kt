@@ -11,7 +11,7 @@ fun main() {
     solution2Printer.printAnswer(2, "51")
 
     //Задача 3
-    val solution3Printer = DecisionPrinter(StringToPalindromeTester())
+    val solution3Printer = DecisionPrinter(PalindromeStringTester())
     solution3Printer.printAnswer(3, "Тест")
 }
 
@@ -45,7 +45,7 @@ class DecimalToBinaryConverter : Solver {
     }
 }
 
-class StringToPalindromeTester : Solver {
+class PalindromeStringTester : Solver {
 
     override fun getSolution(variable: String): String {
         return if (variable.reversed().lowercase() == variable.lowercase()) {
