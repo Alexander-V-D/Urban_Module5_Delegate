@@ -15,6 +15,9 @@ fun main() {
     solution3Printer.printAnswer(3, "Тест")
 }
 
+interface Solver {
+    fun getSolution(variable: String): String
+}
 
 class BinaryToDecimalConverter : Solver {
 
@@ -49,10 +52,6 @@ class StringToPalindromeTester : Solver {
             "Строка - палиндром"
         } else "Строка не палиндром"
     }
-}
-
-interface Solver {
-    fun getSolution(variable: String): String
 }
 
 class DecisionPrinter(private val solver: Solver) : Solver by solver {
